@@ -44,6 +44,8 @@ function play(choice) {
 
   determineWinner(playerChoice, computerChoice)
 
+  dancingPanda()
+
 }
 
 function drawChoices(playerChoice, computerChoice) {
@@ -92,4 +94,24 @@ function determineWinner(playerChoice, computerChoice) {
     document.getElementById('winner').innerText = "It's a draw!"
   }
 
+}
+
+function dancingPanda() {
+
+  addPanda()
+
+  setTimeout((deletePanda), 2000);
+
+}
+
+function addPanda() {
+  let panda = document.getElementById('dancing-panda')
+
+  panda.src = "https://media.tenor.com/images/c8867492437d2ee722a81ee862d0eca9/tenor.gif"
+}
+
+function deletePanda() {
+  let panda = document.getElementById('dancing-panda')
+
+  panda.src = ""
 }
